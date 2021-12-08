@@ -21,7 +21,7 @@
         body {
             width: 100vw;
             height: 100vh;
-            overflow: hidden;
+            /* overflow: hidden; */
             background-color: var(--green);
             background: linear-gradient(45deg, var(--dark), var(--green));
             font-size: 62.5%;
@@ -108,7 +108,33 @@
             color: #fff;
             font-size: 6rem;
             /* border: 1px solid red; */
+            scroll-behavior: smooth;
+            overflow: hidden;
             z-index: 0;
+        }
+
+        .lyrics div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .lyrics span {
+            position: absolute;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        .lyrics .prev {
+            top: 0;
+        }
+
+        .lyrics .next {
+            bottom: 0;
         }
     </style>
 </head>
@@ -119,6 +145,7 @@
             <ul>
                 <li id="s1">Alleluja, Hosanna</li>
                 <li id="s2">Bądź z nami w kontakcie</li>
+                <li id="s3">Będę biec, biec, biec, by ujrzeć Zbawcę</li>
                 <li id="s24">Jeden jest tylko Pan</li>
                 <li id="s43">Panie mój, przychodzę dziś</li>
                 <li id="s56">Zobaczcie jak wielką miłość</li>
@@ -133,16 +160,36 @@
         <p>A, a, a, alleluja, ho, ho, ho, hosanna<br>Mój Pan kocha mnie, Jego radość jest w sercu mym.</p>
     </div>
     <div class="lyrics song-2">
-        <p>Bądź z nami w kontakcie, Panie Boże,  <br>Choć diabeł robi nam zwarcie, <br>Niech iskra miłości między nami przeskoczy <br>i zapalą się nasze latarnie.</p>
+        <p>Bądź z nami w kontakcie, Panie Boże, <br>Choć diabeł robi nam zwarcie, <br>Niech iskra miłości między nami
+            przeskoczy <br>i zapalą się nasze latarnie.</p>
+    </div>
+    <div class="lyrics song-3">
+        <div id="s-3-1">
+            <p>1. Będę biec, biec, biec , by ujrzeć Zbawcę. <br>Oj będę biec, biec, biec, by ujrzeć Zbawcę. <br>gdy nasz
+                Pan powróci znów. </p><span class="next"><a href="#s-3-2">Next</a></span>
+        </div>
+        <div id="s-3-2"><span class="prev"><a href="#s-3-1">Prev</a></span>
+            <p>2. Każde o oko Go wtedy ujrzy <br>Każde o oko Go wtedy ujrzy <br>Oj każde o oko Go wtedy ujrzy <br>Gdy
+                nasz Pan powróci znów.</p><span class="next"><a href="#s-3-3">Next</a></span>
+        </div>
+        <div id="s-3-3"><span class="prev"><a href="#s-3-2">Prev</a></span>
+            <p>3. Każde kolano się przed Nim zegnie <br>Każde kolano się przed Nim zegnie <br>Oj każde kolano się przed
+                Nim zegnie <br>Gdy nasz Pan powróci znów.</p>
+        </div>
     </div>
     <div class="lyrics song-24">
-        <p>Jeden jest tylko Pan, tutaj jest Jego dom,<br>Klęknijcie z nami, którzy tu wchodzicie<br>I razem chwalmy Go.<br>Miejsce to wybrał Pan, aby wysłuchać nas,<br>Śpiewajmy wszyscy słudzy w Jego Domu,<br>Bogu oddajmy cześć.</p>
+        <p>Jeden jest tylko Pan, tutaj jest Jego dom,<br>Klęknijcie z nami, którzy tu wchodzicie<br>I razem chwalmy
+            Go.<br>Miejsce to wybrał Pan, aby wysłuchać nas,<br>Śpiewajmy wszyscy słudzy w Jego Domu,<br>Bogu oddajmy
+            cześć.</p>
     </div>
     <div class="lyrics song-43">
-        <p>Panie mój, przychodzę dziś <br>Serce me skruszone przyjm<br>Skłaniam się przed świętym tronem Twym<br>Wznoszę ręce moje wzwyż<br>Miłość mą wyznaje Ci<br>Uwielbiam Ciebie w Duchu <br>Uwielbiam w Prawdzie Cię<br>Życie me oddaje Tobie, uświęć je.</p>
+        <p>Panie mój, przychodzę dziś <br>Serce me skruszone przyjm<br>Skłaniam się przed świętym tronem Twym<br>Wznoszę
+            ręce moje wzwyż<br>Miłość mą wyznaje Ci<br>Uwielbiam Ciebie w Duchu <br>Uwielbiam w Prawdzie Cię<br>Życie me
+            oddaje Tobie, uświęć je.</p>
     </div>
     <div class="lyrics song-56">
-        <p>Zobaczcie jak wielką miłość<br>Ojciec ofiarował nam.<br>Zobaczcie jak wielką miłość<br>Ojciec ofiarował nam.<br>Byśmy dziećmi Boga mogli być (2x)</p>
+        <p>Zobaczcie jak wielką miłość<br>Ojciec ofiarował nam.<br>Zobaczcie jak wielką miłość<br>Ojciec ofiarował
+            nam.<br>Byśmy dziećmi Boga mogli być (2x)</p>
     </div>
 </body>
 <script>
@@ -155,12 +202,14 @@
 
     let s1 = document.querySelector('#s1');
     let s2 = document.querySelector('#s2');
+    let s3 = document.querySelector('#s3');
     let s24 = document.querySelector('#s24');
     let s43 = document.querySelector('#s43');
     let s56 = document.querySelector('#s56');
 
     let song1 = document.querySelector('.song-1');
     let song2 = document.querySelector('.song-2');
+    let song3 = document.querySelector('.song-3');
     let song24 = document.querySelector('.song-24');
     let song43 = document.querySelector('.song-43');
     let song56 = document.querySelector('.song-56');
@@ -180,17 +229,49 @@
 
     showHideButton.addEventListener('click', openCloseListsong);
 
-    function hide(o) {o.setAttribute('style', 'display:none;'); console.log('test');}
-    function hideAllSongs() {lyrics.forEach(hide); openCloseListsong();}
+    function hide(o) {
+        o.setAttribute('style', 'display:none;');
+        console.log('test');
+    }
 
-    function showS1() {hideAllSongs(); song1.setAttribute('style', 'display: flex;');}
-    function showS2() {hideAllSongs(); song2.setAttribute('style', 'display: flex;');}
-    function showS24() {hideAllSongs(); song24.setAttribute('style', 'display: flex;');}
-    function showS43() {hideAllSongs(); song43.setAttribute('style', 'display: flex;');}
-    function showS56() {hideAllSongs(); song56.setAttribute('style', 'display: flex;');}
+    function hideAllSongs() {
+        lyrics.forEach(hide);
+        openCloseListsong();
+    }
+
+    function showS1() {
+        hideAllSongs();
+        song1.setAttribute('style', 'display: flex;');
+    }
+
+    function showS2() {
+        hideAllSongs();
+        song2.setAttribute('style', 'display: flex;');
+    }
+
+    function showS3() {
+        hideAllSongs();
+        song3.setAttribute('style', 'display: block;');
+    }
+
+    function showS24() {
+        hideAllSongs();
+        song24.setAttribute('style', 'display: flex;');
+    }
+
+    function showS43() {
+        hideAllSongs();
+        song43.setAttribute('style', 'display: flex;');
+    }
+
+    function showS56() {
+        hideAllSongs();
+        song56.setAttribute('style', 'display: flex;');
+    }
 
     s1.addEventListener('click', showS1);
     s2.addEventListener('click', showS2);
+    s3.addEventListener('click', showS3);
     s24.addEventListener('click', showS24);
     s43.addEventListener('click', showS43);
     s56.addEventListener('click', showS56);
