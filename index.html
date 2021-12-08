@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Śpiewnik</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --green: #38ccae;
+            --dark: #1b1b1b;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: var(--green);
+            background: linear-gradient(45deg, var(--dark), var(--green));
+            font-size: 62.5%;
+        }
+
+        /* SONGLIST */
+
+        .songlist {
+            position: absolute;
+            width: 400px;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 7px 0 7px 7px;
+            background-color: rgba(0, 0, 0, .75);
+            background: linear-gradient(to left bottom, rgba(0, 0, 0, .25), rgba(0, 0, 0, .75));
+            backdrop-filter: blur(12px);
+            left: 0px;
+            transform: translate(-400px, 5vh);
+            transition: transform .7s ease-out;
+            z-index: 1;
+        }
+
+        .songlist__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 50px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            border-radius: 0 7px 7px 0;
+            cursor: pointer;
+            background: linear-gradient(to left top, rgba(0, 0, 0, .30), rgba(0, 0, 0, .25));
+        }
+
+        .songlist__button:hover {
+            background: linear-gradient(to left top, rgba(0, 0, 0, .55), rgba(0, 0, 0, .25));
+        }
+
+        .songlist__button p {
+            color: #fff;
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+
+        .songlist__list {
+            width: 94%;
+            height: 96%;
+            overflow: auto;
+        }
+
+        .songlist p {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .songlist ul {
+            list-style-type: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .songlist li:hover {
+            text-decoration: underline;
+        }
+
+        /* LYRICS */
+
+        .lyrics {
+            position: absolute;
+            transform: translate(2vw, 1vh);
+            width: 96vw;
+            height: 98vh;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 6rem;
+            /* border: 1px solid red; */
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="songlist">
+        <div class="songlist__list">
+            <ul>
+                <li id="s1">Alleluja, Hosanna</li>
+                <li id="s2">Bądź z nami w kontakcie</li>
+                <li id="s24">Jeden jest tylko Pan</li>
+                <li id="s43">Panie mój, przychodzę dziś</li>
+                <li id="s56">Zobaczcie jak wielką miłość</li>
+            </ul>
+        </div>
+        <div class="songlist__button">
+            <p>&raquo;</p>
+        </div>
+    </div>
+
+    <div class="lyrics song-1">
+        <p>A, a, a, alleluja, ho, ho, ho, hosanna<br>Mój Pan kocha mnie, Jego radość jest w sercu mym.</p>
+    </div>
+    <div class="lyrics song-2">
+        <p>Bądź z nami w kontakcie, Panie Boże,  <br>Choć diabeł robi nam zwarcie, <br>Niech iskra miłości między nami przeskoczy <br>i zapalą się nasze latarnie.</p>
+    </div>
+    <div class="lyrics song-24">
+        <p>Jeden jest tylko Pan, tutaj jest Jego dom,<br>Klęknijcie z nami, którzy tu wchodzicie<br>I razem chwalmy Go.<br>Miejsce to wybrał Pan, aby wysłuchać nas,<br>Śpiewajmy wszyscy słudzy w Jego Domu,<br>Bogu oddajmy cześć.</p>
+    </div>
+    <div class="lyrics song-43">
+        <p>Panie mój, przychodzę dziś <br>Serce me skruszone przyjm<br>Skłaniam się przed świętym tronem Twym<br>Wznoszę ręce moje wzwyż<br>Miłość mą wyznaje Ci<br>Uwielbiam Ciebie w Duchu <br>Uwielbiam w Prawdzie Cię<br>Życie me oddaje Tobie, uświęć je.</p>
+    </div>
+    <div class="lyrics song-56">
+        <p>Zobaczcie jak wielką miłość<br>Ojciec ofiarował nam.<br>Zobaczcie jak wielką miłość<br>Ojciec ofiarował nam.<br>Byśmy dziećmi Boga mogli być (2x)</p>
+    </div>
+</body>
+<script>
+    let showHideButton = document.querySelector('.songlist__button');
+    let showHideButtonP = document.querySelector('.songlist__button p');
+    let listsong = document.querySelector('.songlist');
+    let isOpen = false;
+
+    let lyrics = document.querySelectorAll('.lyrics');
+
+    let s1 = document.querySelector('#s1');
+    let s2 = document.querySelector('#s2');
+    let s24 = document.querySelector('#s24');
+    let s43 = document.querySelector('#s43');
+    let s56 = document.querySelector('#s56');
+
+    let song1 = document.querySelector('.song-1');
+    let song2 = document.querySelector('.song-2');
+    let song24 = document.querySelector('.song-24');
+    let song43 = document.querySelector('.song-43');
+    let song56 = document.querySelector('.song-56');
+
+
+    function openCloseListsong() {
+        if (isOpen) {
+            listsong.setAttribute('style', 'transform: translate(-400px, 5vh);');
+            showHideButtonP.innerHTML = '&raquo';
+        } else {
+            listsong.setAttribute('style', 'transform: translate(2vw, 5vh);');
+            showHideButtonP.innerHTML = '&laquo';
+        }
+
+        isOpen = !isOpen;
+    }
+
+    showHideButton.addEventListener('click', openCloseListsong);
+
+    function hide(o) {o.setAttribute('style', 'display:none;'); console.log('test');}
+    function hideAllSongs() {lyrics.forEach(hide); openCloseListsong();}
+
+    function showS1() {hideAllSongs(); song1.setAttribute('style', 'display: flex;');}
+    function showS2() {hideAllSongs(); song2.setAttribute('style', 'display: flex;');}
+    function showS24() {hideAllSongs(); song24.setAttribute('style', 'display: flex;');}
+    function showS43() {hideAllSongs(); song43.setAttribute('style', 'display: flex;');}
+    function showS56() {hideAllSongs(); song56.setAttribute('style', 'display: flex;');}
+
+    s1.addEventListener('click', showS1);
+    s2.addEventListener('click', showS2);
+    s24.addEventListener('click', showS24);
+    s43.addEventListener('click', showS43);
+    s56.addEventListener('click', showS56);
+</script>
+
+</html>
