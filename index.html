@@ -38,8 +38,7 @@
             align-items: center;
             border-radius: 7px 0 7px 7px;
             background-color: rgba(0, 0, 0, .75);
-            background: linear-gradient(to left bottom, rgba(0, 0, 0, .25), rgba(0, 0, 0, .75));
-            backdrop-filter: blur(12px);
+            background: linear-gradient(to left bottom, rgba(0, 0, 0, .90), rgba(0, 0, 0, .95));
             left: 0px;
             transform: translate(-400px, 5vh);
             transition: transform .7s ease-out;
@@ -58,11 +57,11 @@
             transform: translateX(100%);
             border-radius: 0 7px 7px 0;
             cursor: pointer;
-            background: linear-gradient(to left top, rgba(0, 0, 0, .30), rgba(0, 0, 0, .25));
+            background: linear-gradient(to left top, rgba(0, 0, 0, .95), rgba(0, 0, 0, .94));
         }
 
-        .songlist__button:hover {
-            background: linear-gradient(to left top, rgba(0, 0, 0, .55), rgba(0, 0, 0, .25));
+        .songlist__button:hover p {
+            color: var(--green);
         }
 
         .songlist__button p {
@@ -101,7 +100,7 @@
             position: absolute;
             transform: translate(2vw, 1vh);
             width: 96vw;
-            height: 98vh;
+            height: 99vh;
             display: none;
             justify-content: center;
             align-items: center;
@@ -126,7 +125,12 @@
         .lyrics span {
             position: absolute;
             margin: 0 auto;
-            font-size: 1rem;
+            font-size: 3rem;
+        }
+
+        .lyrics span a {
+            text-decoration: none;
+            color: #fff;
         }
 
         .lyrics .prev {
@@ -146,13 +150,20 @@
                 <li id="s1">Alleluja, Hosanna</li>
                 <li id="s2">Bądź z nami w kontakcie</li>
                 <li id="s3">Będę biec, biec, biec, by ujrzeć Zbawcę</li>
+                <li id="s4">Boża radość</li>
+                <li id="s5">Bóg jest tu</li>
+                <li id="s6">Bóg kocha mnie takiego jakim jestem</li>
+                <li id="s7">Bóg nie umarł - Jezus żyje</li>
+                <li id="s8">Chcę ofiarować ciało i duszę</li>
+                <li id="s9">Choć jestem mały jak palec</li>
+                <li id="s11">Chwalę Ciebie Panie</li>
                 <li id="s24">Jeden jest tylko Pan</li>
                 <li id="s43">Panie mój, przychodzę dziś</li>
                 <li id="s56">Zobaczcie jak wielką miłość</li>
             </ul>
         </div>
         <div class="songlist__button">
-            <p>&raquo;</p>
+            <p>&rtrif;</p>
         </div>
     </div>
 
@@ -166,16 +177,45 @@
     <div class="lyrics song-3">
         <div id="s-3-1">
             <p>1. Będę biec, biec, biec , by ujrzeć Zbawcę. <br>Oj będę biec, biec, biec, by ujrzeć Zbawcę. <br>gdy nasz
-                Pan powróci znów. </p><span class="next"><a href="#s-3-2">Next</a></span>
+                Pan powróci znów. </p><span class="next"><a href="#s-3-2">&dtrif;</a></span>
         </div>
-        <div id="s-3-2"><span class="prev"><a href="#s-3-1">Prev</a></span>
+        <div id="s-3-2"><span class="prev"><a href="#s-3-1">&utrif;</a></span>
             <p>2. Każde o oko Go wtedy ujrzy <br>Każde o oko Go wtedy ujrzy <br>Oj każde o oko Go wtedy ujrzy <br>Gdy
-                nasz Pan powróci znów.</p><span class="next"><a href="#s-3-3">Next</a></span>
+                nasz Pan powróci znów.</p><span class="next"><a href="#s-3-3">&dtrif;</a></span>
         </div>
-        <div id="s-3-3"><span class="prev"><a href="#s-3-2">Prev</a></span>
+        <div id="s-3-3"><span class="prev"><a href="#s-3-2">&utrif;</a></span>
             <p>3. Każde kolano się przed Nim zegnie <br>Każde kolano się przed Nim zegnie <br>Oj każde kolano się przed
                 Nim zegnie <br>Gdy nasz Pan powróci znów.</p>
         </div>
+    </div>
+    <div class="lyrics song-4">
+        <div id="s-4-1">
+            <p>1. Boża radość jak rzeka, Boża radość jak rzeka, <br>Boża radość wypełnia duszę mą. <br>Boża radość jak rzeka, Boża radość jak rzeka, <br>Boża radość wypełnia duszę mą.</p><span class="next"><a href="#s-4-2">&dtrif;</a></span>
+        </div>
+        <div id="s-4-2"><span class="prev"><a href="#s-4-1">&utrif;</a></span>
+            <p>2. Boża miłość jak rzeka, Boża miłość jak rzeka, <br>Boża miłość wypełnia duszę mą. <br>Boża miłość jak rzeka, Boża miłość jak rzeka, <br>Boża miłość wypełnia duszę mą.</p><span class="next"><a href="#s-4-3">&dtrif;</a></span>
+        </div>
+        <div id="s-4-3"><span class="prev"><a href="#s-4-2">&utrif;</a></span>
+            <p>3. Boży pokój jak rzeka, Boży pokój jak rzeka, <br>Boży pokój wypełnia duszę mą. <br>Boży pokój jak rzeka, Boży pokój jak rzeka, <br>Boży pokój wypełnia duszę mą.</p>
+        </div>
+    </div>
+    <div class="lyrics song-5">
+        <p>Bóg jest tu, Bóg jest tam! <br>Bóg jest w każdym z nas i w sercu Go mam! <br>Światłem jest, w ciemną noc <br>i w modlitwie mej słyszę jego głos! <br>Bóg jest tu, dobry jest! <br>W każdy czas!</p>
+    </div>
+    <div class="lyrics song-6">
+        <p>Bóg kocha mnie takiego, jakim jestem, <br>Raduje się każdym moim gestem.  <br>Alleluja! Boża radość mnie rozpiera!</p>
+    </div>
+    <div class="lyrics song-7">
+        <p>Bóg nie umarł - Jezus żyje <br>Bóg nie umarł - Jezus żyje <br>Bóg nie umarł - Jezus żyje  <br>Daj mu ręce swe <br>Daj mu nogi swe <br>Daj mu serce swe <br>Daj mu duszę swą <br>On zawsze z nami jest!</p>
+    </div>
+    <div class="lyrics song-8">
+        <p>Chcę ofiarować ciało i duszę, <br>rozum i serce, noce i dnie. <br>Chcę ofiarować Tobie Maryjo,(o Panie) <br>wszystko czym jestem bo kocham Cię.</p>
+    </div>
+    <div class="lyrics song-9">
+        <p>Choć jestem mały jak palec, <br>Choć jestem mały jak mrówka, <br>Ale proszę Cię Panie: <br>Wejdź do mego serduszka.</p>
+    </div>
+    <div class="lyrics song-11">
+        <p>Chwalę Ciebie, Panie, (chwalę Ciebie, Panie) <br>I uwielbiam, (i uwielbiam), <br>Wznoszę w górę swoje ręce, uwielbiając imię Twe./2x <br>Bo wielkiś Ty, wielkie dzieła czynisz dziś, <br>Nie dorówna Tobie nikt, nie dorówna Tobie nikt.</p>
     </div>
     <div class="lyrics song-24">
         <p>Jeden jest tylko Pan, tutaj jest Jego dom,<br>Klęknijcie z nami, którzy tu wchodzicie<br>I razem chwalmy
@@ -203,6 +243,13 @@
     let s1 = document.querySelector('#s1');
     let s2 = document.querySelector('#s2');
     let s3 = document.querySelector('#s3');
+    let s4 = document.querySelector('#s4');
+    let s5 = document.querySelector('#s5');
+    let s6 = document.querySelector('#s6');
+    let s7 = document.querySelector('#s7');
+    let s8 = document.querySelector('#s8');
+    let s9 = document.querySelector('#s9');
+    let s11 = document.querySelector('#s11');
     let s24 = document.querySelector('#s24');
     let s43 = document.querySelector('#s43');
     let s56 = document.querySelector('#s56');
@@ -210,6 +257,13 @@
     let song1 = document.querySelector('.song-1');
     let song2 = document.querySelector('.song-2');
     let song3 = document.querySelector('.song-3');
+    let song4 = document.querySelector('.song-4');
+    let song5 = document.querySelector('.song-5');
+    let song6 = document.querySelector('.song-6');
+    let song7 = document.querySelector('.song-7');
+    let song8 = document.querySelector('.song-8');
+    let song9 = document.querySelector('.song-9');
+    let song11 = document.querySelector('.song-11');
     let song24 = document.querySelector('.song-24');
     let song43 = document.querySelector('.song-43');
     let song56 = document.querySelector('.song-56');
@@ -218,10 +272,10 @@
     function openCloseListsong() {
         if (isOpen) {
             listsong.setAttribute('style', 'transform: translate(-400px, 5vh);');
-            showHideButtonP.innerHTML = '&raquo';
+            showHideButtonP.innerHTML = '&rtrif;';
         } else {
             listsong.setAttribute('style', 'transform: translate(2vw, 5vh);');
-            showHideButtonP.innerHTML = '&laquo';
+            showHideButtonP.innerHTML = '&ltrif;';
         }
 
         isOpen = !isOpen;
@@ -253,6 +307,34 @@
         hideAllSongs();
         song3.setAttribute('style', 'display: block;');
     }
+    function showS4() {
+        hideAllSongs();
+        song4.setAttribute('style', 'display: block;');
+    }
+    function showS5() {
+        hideAllSongs();
+        song5.setAttribute('style', 'display: flex;');
+    }
+    function showS6() {
+        hideAllSongs();
+        song6.setAttribute('style', 'display: flex;');
+    }
+    function showS7() {
+        hideAllSongs();
+        song7.setAttribute('style', 'display: flex;');
+    }
+    function showS8() {
+        hideAllSongs();
+        song8.setAttribute('style', 'display: flex;');
+    }
+    function showS9() {
+        hideAllSongs();
+        song9.setAttribute('style', 'display: flex;');
+    }
+    function showS11() {
+        hideAllSongs();
+        song11.setAttribute('style', 'display: flex;');
+    }
 
     function showS24() {
         hideAllSongs();
@@ -272,6 +354,13 @@
     s1.addEventListener('click', showS1);
     s2.addEventListener('click', showS2);
     s3.addEventListener('click', showS3);
+    s4.addEventListener('click', showS4);
+    s5.addEventListener('click', showS5);
+    s6.addEventListener('click', showS6);
+    s7.addEventListener('click', showS7);
+    s8.addEventListener('click', showS8);
+    s9.addEventListener('click', showS9);
+    s11.addEventListener('click', showS11);
     s24.addEventListener('click', showS24);
     s43.addEventListener('click', showS43);
     s56.addEventListener('click', showS56);
