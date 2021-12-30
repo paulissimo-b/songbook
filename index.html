@@ -27,6 +27,29 @@
             font-size: 62.5%;
         }
 
+        .escape-btn {
+            position: absolute;
+            right: 2%;
+            top: 2%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            background-image: linear-gradient(to left top, rgba(0, 0, 0, .95), rgba(0, 0, 0, .94));
+            color: #fff;
+            opacity: 0;
+            transition: opacity 1s;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .escape-btn:hover {
+            opacity: 1;
+        }
+
         /* SONGLIST */
 
         .songlist {
@@ -148,6 +171,9 @@
 </head>
 
 <body>
+
+<div class="escape-btn"><p>X</p></div>
+
     <div class="songlist">
         <div class="songlist__list">
             <ul>
@@ -239,7 +265,7 @@
             <p>&rtrif;</p>
         </div>
     </div>
-
+    <div class="lyrics song-0"></div>
     <div class="lyrics song-1">
         <p>A, a, a, alleluja, ho, ho, ho, hosanna<br>Mój Pan kocha mnie, Jego radość jest w sercu mym.</p>
     </div>
@@ -259,6 +285,7 @@
         <div id="s-3-3"><span class="prev"><a href="#s-3-2">&utrif;</a></span>
             <p>3. Każde kolano się przed Nim zegnie <br>Każde kolano się przed Nim zegnie <br>Oj każde kolano się przed
                 Nim zegnie <br>Gdy nasz Pan powróci znów.</p>
+                <span class="next"><a href="#s-3-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-4">
@@ -275,6 +302,7 @@
         <div id="s-4-3"><span class="prev"><a href="#s-4-2">&utrif;</a></span>
             <p>3. Boży pokój jak rzeka, Boży pokój jak rzeka, <br>Boży pokój wypełnia duszę mą. <br>Boży pokój jak
                 rzeka, Boży pokój jak rzeka, <br>Boży pokój wypełnia duszę mą.</p>
+                <span class="next"><a href="#s-4-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-5">
@@ -319,7 +347,8 @@
                     href="#s-10-6">&dtrif;</a></span>
         </div>
         <div id="s-10-6"><span class="prev"><a href="#s-10-5">&utrif;</a></span>
-            <p>6. /Chrześcijanin śpiewa <br>Śpiewa śpiewa śpiewa/ 2x </p><span class="next">
+            <p>6. /Chrześcijanin śpiewa <br>Śpiewa śpiewa śpiewa/ 2x </p>
+            <span class="next"><a href="#s-10-1">&utri;</a></span>
         </div>
     </div>
 
@@ -357,6 +386,7 @@
                 że jesteście wspólnotą? <br>Wspólnotą, w której mieszka święty Duch. <br>Pełni mocy, wdzięczności i
                 chwały, <br>Pełni mocy, wdzięczności i chwały, <br>Pełni mocy, wdzięczności i chwały, <br>Wspólnotą, w
                 której mieszka święty Duch.</p>
+                <span class="next"><a href="#s-13-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-14">
@@ -382,6 +412,7 @@
         <div id="s-16-3"><span class="prev"><a href="#s-16-2">&utrif;</a></span>
             <p>Ref. Duch Święty niech jednoczy nas, <br>Bo każdy człowiek to siostra i brat. /2x <br> <br>3. Otwórzmy
                 serca na Boże Światło, <br>By to co dobre w nas nigdy nie zgasło.</p>
+                <span class="next"><a href="#s-16-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-17">
@@ -407,6 +438,7 @@
         <div id="s-18-5"><span class="prev"><a href="#s-18-4">&utrif;</a></span>
             <p>Dzielmy się wiarą jak chlebem, <br>dajmy świadectwo nadziei. <br>Bóg ofiarował nam siebie <br>i my mamy
                 się Nim z ludźmi dzielić.</p>
+                <span class="next"><a href="#s-18-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-19">
@@ -418,6 +450,7 @@
         <div id="s-19-2"><span class="prev"><a href="#s-19-1">&utrif;</a></span>
             <p>2. Będziemy niezmiennie wciąż trwać w miłości i prawdzie, <br>Oddając Mu hołd, miłość i wdzięczność, siłę
                 i moc, <br>Błogosławieństwo i cześć. <br><br>Ref. On Panem jest od wieków na wieki. /3x Amen.</p></span>
+                <span class="next"><a href="#s-19-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-20">
@@ -428,6 +461,7 @@
         <div id="s-20-2"><span class="prev"><a href="#s-20-1">&utrif;</a></span>
             <p>2. Chwała, bądź chwała Królowi, memu Bogu!/2x <br><br>Ref. Imię Pana chwal w modlitwie tej,
                 <br>Wywyższony bądź, Panie mój, hosanna memu Bogu.</p></span>
+                <span class="next"><a href="#s-20-1">&utri;</a></span>
         </div>
     </div>
 
@@ -452,6 +486,7 @@
         <div id="s-22-4"><span class="prev"><a href="#s-22-3">&utrif;</a></span>
             <p>4. Gdy Boży Duch wypełnia mnie <br>Jak Dawid skakać chcę. x2 <br>Jak Dawid, jak Dawid, jak Dawid skakać
                 chcę. x2</p>
+                <span class="next"><a href="#s-22-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-23">
@@ -470,6 +505,7 @@
         <div id="s-23-4"><span class="prev"><a href="#s-23-3">&utrif;</a></span>
             <p>4.Boża radość wypełnia mnie, Panie. <br><br>Ref. Trzymaj mnie mocno dziś,<br>Zawsze chcę przy Tobie być,
                 Panie. /2x</p>
+                <span class="next"><a href="#s-23-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-24">
@@ -489,6 +525,7 @@
         <div id="s-25-3"><span class="prev"><a href="#s-25-2">&utrif;</a></span>
             <p>3. Jesteś pokojem mojego życia, <br>O.... Panie mój./2x <br>Ty jesteś moim Panem, /3x <br>Na zawsze
                 jesteś Panem mym. /2x</p>
+                <span class="next"><a href="#s-25-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-26">
@@ -515,6 +552,7 @@
         <div id="s-28-4"><span class="prev"><a href="#s-28-3">&utrif;</a></span>
             <p>ref: Jezus siłą mą, Jezus pieśnią mego życia <br>Królem wiecznym On, niepojęty w mocy swej <br>w Nim
                 znalazłem to, czego szukałem do dzisiaj <br>sam mi podał dłoń, bym zwyciężał w każdy dzień</p>
+                <span class="next"><a href="#s-28-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-29">
@@ -532,6 +570,7 @@
         <div id="s-30-3"><span class="prev"><a href="#s-30-2">&utrif;</a></span>
             <p>3. Jezu, pozostań w sercu mym, <br>tylko Ty sam zamieszkaj w nim. <br>Dopomóż mi w godzinie złej,
                 <br>wytrwać w miłości Jezu, Twej.</p>
+                <span class="next"><a href="#s-30-1">&utri;</a></span>
         </div>
     </div>
 
@@ -555,6 +594,7 @@
         <div id="s-31-5"><span class="prev"><a href="#s-31-4">&utrif;</a></span>
             <p>Ref. Kiedyś wino i chleb <br>Teraz ciało i chleb <br>Możesz wierzyć lub nie <br>To naprawdę dzieje się
             </p>
+            <span class="next"><a href="#s-31-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-32">
@@ -577,6 +617,7 @@
         <div id="s-33-4"><span class="prev"><a href="#s-33-3">&utrif;</a></span>
             <p>4. Kto stworzył ciebie i mnie <br>Ciebie i mnie, ciebie i mnie. <br>Kto stworzył ciebie i mnie <br>Nasz
                 Ojciec – Bóg</p>
+                <span class="next"><a href="#s-33-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-34">
@@ -604,6 +645,7 @@
         <div id="s-38-2"><span class="prev"><a href="#s-38-1">&utrif;</a></span>
             <p>Zaglądam wszędzie – nie ma, nie ma <br>Szukam, szukam, ale nie ma, nie ma <br>Krążę, krążę – nie ma, nie
                 ma <br>Nie ma innego jak On</p>
+                <span class="next"><a href="#s-38-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-39">
@@ -642,6 +684,7 @@
         <div id="s-41-6"><span class="prev"><a href="#s-41-5">&utrif;</a></span>
             <p>Ref. O, Panie, to Ty na mnie spojrzałeś, <br>Twoje usta dziś wyrzekły me imię, <br>Swoją barkę
                 pozostawiam na brzegu, <br>Razem z Tobą nowy zacznę dziś łów.</p>
+                <span class="next"><a href="#s-41-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-42">
@@ -653,6 +696,7 @@
         <div id="s-42-2"><span class="prev"><a href="#s-42-1">&utrif;</a></span>
             <p>2. Razem z tobą będzie z nami Twoja Mama, <br>Żeby nasza nigdy już nie była sama. <br>Święty Józef
                 tatusiowi dopomoże <br>I grzeczniejsze będą z dzieci Tobą , Boże.</p></span>
+                <span class="next"><a href="#s-42-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-43">
@@ -688,8 +732,8 @@
         </div>
         <div id="s-44-6"><span class="prev"><a href="#s-44-5">&utrif;</a></span>
             <p>Ref. Tu stoją krokodyle I orangutany <br>Dwa malutkie węże I królewski orzeł <br>I kot i mysz I bardzo
-                duży słoń <br>Dlaczego jeszcze nie ma dwóch jednorożców <br>La la la la la la la la /x3</p><span
-                class="next">
+                duży słoń <br>Dlaczego jeszcze nie ma dwóch jednorożców <br>La la la la la la la la /x3</p>
+                <span class="next"><a href="#s-44-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-45">
@@ -699,7 +743,8 @@
         </div>
         <div id="s-45-2"><span class="prev"><a href="#s-45-1">&utrif;</a></span>
             <p>Przyjdźcie bo Pan nas zaprasza <br>Wyciąga przebitą dłoń <br>Syćmy się Ciałem Chrystusa <br>Bo przez nie
-                nam życie dał On</p></span>
+                nam życie dał On</p>
+                <span class="next"><a href="#s-45-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-46">
@@ -748,6 +793,7 @@
         <div id="s-48-9"><span class="prev"><a href="#s-48-8">&utrif;</a></span>
             <p>Ref. Taki duży, taki mały może Świętym być, <br>Taki gruby, taki chudy może Świętym być, <br>Taki ja i
                 taki ty może Świętym być/2x</p>
+                <span class="next"><a href="#s-48-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-49">
@@ -781,6 +827,7 @@
         <div id="s-53-3"><span class="prev"><a href="#s-53-2">&utrif;</a></span>
             <p>3. Karmisz mnie codziennie swoim Ciałem, <br>Poisz mnie przedziwnie swoją Krwią, <br>Uczysz mnie
                 codziennie mądrości, swoim słowem, <br>Żebym wreszcie poznał miłość Twą.</p>
+                <span class="next"><a href="#s-53-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-54">
@@ -792,6 +839,7 @@
         <div id="s-54-2"><span class="prev"><a href="#s-54-1">&utrif;</a></span>
             <p>2. My jesteśmy na ziemi światłem Mym. /2x <br>Aby ludzie widzieli dobre czyny w nas <br>I chwalili Ojca,
                 który w niebie jest. /2x</p>
+                <span class="next"><a href="#s-54-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-55">
@@ -824,6 +872,7 @@
         </div>
         <div id="s-55-7"><span class="prev"><a href="#s-55-6">&utrif;</a></span>
             <p>Ziarenko do ziarenka, <br>A kamyczek do kamyczka, <br>A cegiełka do cegiełki na nasz wspólny dom.</p>
+            <span class="next"><a href="#s-55-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-56">
@@ -843,6 +892,7 @@
         <div id="s-57-3"><span class="prev"><a href="#s-57-2">&utrif;</a></span>
             <p>3. Cicha noc, święta noc! Boże nasz, serca masz, <br>Radość sprawia nam nowina, że nadeszła ta godzina,
                 <br>W którejś narodził się. /2x</p>
+                <span class="next"><a href="#s-57-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-58">
@@ -868,7 +918,7 @@
         </div>
         <div id="s-58-6"><span class="prev"><a href="#s-58-5">&utrif;</a></span>
             <p>Ref. Śpiewajcie, aniołowie, pasterze, grajcie Mu, <br>Kłaniajcie się królowie, i dary złóżcie Mu.</p>
-            <span class="next">
+            <span class="next"><a href="#s-58-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-59">
@@ -899,7 +949,8 @@
         </div>
         <div id="s-59-6"><span class="prev"><a href="#s-59-5">&utrif;</a></span>
             <p>Ref. Zaśpiewajmy kolędę Jezusowi dziś, <br>Niech kolęduje z nami cała ziemia. <br>Zaśpiewajmy kolędę
-                Jezusowi dziś, <br>Niech kolęduje z nami cały świat.</p><span class="next">
+                Jezusowi dziś, <br>Niech kolęduje z nami cały świat.</p>
+                <span class="next"><a href="#s-59-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-60">
@@ -958,7 +1009,8 @@
         </div>
         <div id="s-60-14"><span class="prev"><a href="#s-60-13">&utrif;</a></span>
             <p>Ref. Chrystus się rodzi, nas oswobodzi. <br>Anieli grają, króle witają, <br>Pasterze śpiewają, bydlęta
-                klękają, <br>Cuda, cuda ogłaszają.</p><span class="next">
+                klękają, <br>Cuda, cuda ogłaszają.</p>
+                <span class="next"><a href="#s-60-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-61">
@@ -980,6 +1032,7 @@
         <div id="s-61-4"><span class="prev"><a href="#s-61-3">&utrif;</a></span>
             <p>4. Idźcież do Betlejem, gdzie Dziecię zrodzone, <br>W pieluszki powite, w żłobie położone: <br>Oddajcie
                 Mu pokłon boski, On osłodzi wasze troski". <br> <br>Ref. "Gloria, gloria, gloria in excelsis Deo."</p>
+                <span class="next"><a href="#s-61-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-62">
@@ -996,6 +1049,7 @@
         <div id="s-62-3"><span class="prev"><a href="#s-62-2">&utrif;</a></span>
             <p>3. Łączcie się w dziękach, wszystkie ziemskie dzieci, <br>Niechaj się miłość w sercu waszym nieci.
                 <br>Lili, lili, laj, drogi Zbawicielu, <br>Lili, lili, laj, nasz Odkupicielu.</p>
+                <span class="next"><a href="#s-62-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-63">
@@ -1029,6 +1083,7 @@
         </div>
         <div id="s-63-8"><span class="prev"><a href="#s-63-7">&utrif;</a></span>
             <p>Ref. Hejże ino dyna, dyna, narodził się Bóg Dziecina <br>W Betlejem, w Betlejem. /2x</p>
+            <span class="next"><a href="#s-63-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-64">
@@ -1052,6 +1107,7 @@
         </div>
         <div id="s-65-4"><span class="prev"><a href="#s-65-3">&utrif;</a></span>
             <p>Ref. Lulajże, Jezuniu, lulajże lulaj, <br>A Ty Go, Matulu, w płaczu utulaj. /2x</p>
+            <span class="next"><a href="#s-65-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-66">
@@ -1074,6 +1130,7 @@
         <div id="s-66-4"><span class="prev"><a href="#s-66-3">&utrif;</a></span>
             <p>4. Tak jak każą nam kapłani, damy dar troisty: <br>Modły, pracę niosąc w dani i żar serca czysty. <br>To
                 kadzidło, mirrę, złoto niesiem Jezu szczerze; <br>Co dajemy Ci z ochotą od nas przyjm w ofierze.</p>
+                <span class="next"><a href="#s-66-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-67">
@@ -1091,6 +1148,7 @@
             <p>3. Czy zamieszkasz w tym sercu, Zbawco mój i Panie, <br>Gdzie nędzniejsze niż w stajni znajdziesz tam
                 posłanie? <br>Ulituj się nade mną, nad stworzeniem Twoim, <br>Jakoś stajnią nie wzgardził, nie gardź
                 sercem moim.</p>
+                <span class="next"><a href="#s-67-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-68">
@@ -1113,6 +1171,7 @@
         <div id="s-68-5"><span class="prev"><a href="#s-68-4">&utrif;</a></span>
             <p>5. Któż to słyszał takie dziwy? Tyś człowiek i Bóg prawdziwy, <br>Ty łączysz w Boskiej Osobie dwie natury
                 różne sobie. /2x</p>
+                <span class="next"><a href="#s-68-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-69">
@@ -1146,6 +1205,7 @@
         </div>
         <div id="s-69-8"><span class="prev"><a href="#s-69-7">&utrif;</a></span>
             <p>Ref. Chwała na wysokości, <br>Chwała na wysokości, <br>A pokój na ziemi. /2x</p>
+            <span class="next"><a href="#s-69-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-70">
@@ -1179,8 +1239,8 @@
             <span class="next"><a href="#s-70-8">&dtrif;</a></span>
         </div>
         <div id="s-70-8"><span class="prev"><a href="#s-70-7">&utrif;</a></span>
-            <p>Ref. Hejże, hejże, Panie Jezu, hejże, hejże, hoc, hoc, <br>Chodziliśmy, budziliśmy pastuszków całą noc.
-            </p>
+            <p>Ref. Hejże, hejże, Panie Jezu, hejże, hejże, hoc, hoc, <br>Chodziliśmy, budziliśmy pastuszków całą noc.</p>
+            <span class="next"><a href="#s-70-1">&utri;</a></span>
         </div>
     </div>
 
@@ -1209,6 +1269,7 @@
         </div>
         <div id="s-71-6"><span class="prev"><a href="#s-71-5">&utrif;</a></span>
             <p>Ref. Świeć gwiazdeczko mała świeć <br>Do Jezusa prowadź mnie.</p>
+            <span class="next"><a href="#s-71-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-72">
@@ -1225,6 +1286,7 @@
         <div id="s-72-3"><span class="prev"><a href="#s-72-2">&utrif;</a></span>
             <p>3. Naprzód tedy, niechaj wszędy zabrzmi świat w wesołości, <br>Że posłany nam jest dany Emanuel w
                 niskości. <br>Jego tedy przywitajmy, z aniołami zaśpiewajmy: <br>Chwała na wysokości!</p>
+                <span class="next"><a href="#s-72-1">&utri;</a></span>
         </div>
     </div>
     <div class="lyrics song-73">
@@ -1255,6 +1317,7 @@
         <div id="s-74-4"><span class="prev"><a href="#s-74-3">&utrif;</a></span>
             <p>4. I my czekamy na Ciebie, Pana <br>A skoro przyjdziesz na głos kapłana, <br>Padniemy na twarz przed Tobą
                 <br>Wierząc, żeś jest pod osłoną chleba i wina.</p>
+                <span class="next"><a href="#s-74-1">&utri;</a></span>
         </div>
     </div>
 </body>
@@ -1263,6 +1326,7 @@
     let showHideButtonP = document.querySelector('.songlist__button p');
     let listsong = document.querySelector('.songlist');
     let isOpen = false;
+    let escape = document.querySelector('.escape-btn');
 
     let lyrics = document.querySelectorAll('.lyrics');
 
@@ -1444,15 +1508,21 @@
 
     showHideButton.addEventListener('click', openCloseListsong);
 
+    
     function hide(o) {
         o.setAttribute('style', 'display:none;');
-        console.log('test');
     }
-
+    
     function hideAllSongs() {
         lyrics.forEach(hide);
         openCloseListsong();
     }
+    
+    escape.addEventListener('click', () => {
+        lyrics.forEach(hide);
+        let song0 = document.querySelector('.song-0');
+        song0.setAttribute('style', 'display: block');
+    })
 
     function showS1() {
         hideAllSongs();
